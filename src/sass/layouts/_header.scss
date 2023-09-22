@@ -1,0 +1,21 @@
+.header {
+  padding: 17px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+
+  .logo-img {
+    width: 104px;
+  }
+
+  .nav {
+    display: none;
+
+    &__list {}
+  
+    &__item {}
+  
+    &__link {}
+  }
+}
