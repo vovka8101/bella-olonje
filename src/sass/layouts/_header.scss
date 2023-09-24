@@ -1,9 +1,15 @@
+@use "../abstracts/mixins" as m;
+
 .header {
   padding: 17px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
+
+  @include m.desktop {
+    padding: 26px 40px;
+  }
 
   .logo-img {
     width: 104px;
@@ -12,10 +18,22 @@
   .nav {
     display: none;
 
-    &__list {}
+    @include m.tablet {
+      display: block;
+    }
+
+    &__list {
+      display: flex;
+      gap: 94px;
+    }
   
-    &__item {}
+    &__item {
+    }
   
-    &__link {}
+    &__link {
+      display: block;
+      padding: 10px;
+      font-weight: 500;
+    }
   }
 }

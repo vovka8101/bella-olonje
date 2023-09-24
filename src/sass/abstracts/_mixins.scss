@@ -1,16 +1,11 @@
-// @mixin navigation {
-//   .nav {
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
 
-//     &__list {
-
-//     }
-  
-//     &__item {
-
-//     }
-  
-//     &__link {
-
-//     }
-//   }
-// }
+@mixin desktop {
+  @media (min-width: 992px) {
+    @content;
+  }
+}

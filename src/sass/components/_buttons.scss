@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
 
 .burger-button {
   position: relative;
@@ -30,6 +31,10 @@
 
   &:hover {
     transform: scale(1.1);
+  }
+
+  @include m.tablet {
+    display: none;
   }
 }
 

@@ -1,0 +1,14 @@
+@use "../abstracts/fonts" as f;
+
+body {
+  font-family: f.$main-font;
+}
+
+.hide {
+  overflow: hidden;
+}
+
+.link-active {
+  color: #fa4a0c;
+  pointer-events: none;
+}
