@@ -1,0 +1,12 @@
+.main {
+
+  .how-it-works {
+    &__title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 36px; /* 150% */
+      letter-spacing: 0.1px;
+    }
+  }
+}

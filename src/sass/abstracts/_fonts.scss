@@ -11,3 +11,9 @@ $main-font: "Montserrat", sans-serif;
   src: url(../assets/fonts/Monteserrat/Monteserrat-SemiBold.ttf);
   font-weight: 600;
 }
+
+@font-face {
+  font-family: $main-font;
+  src: url(../assets/fonts/Monteserrat/Monteserrat-Bold.ttf);
+  font-weight: 700;
+}

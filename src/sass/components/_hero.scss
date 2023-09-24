@@ -1,16 +1,96 @@
+@use "../abstracts/fonts" as f;
+
 .hero {
 
-  &__subtitle {}
+  &__top {
+    padding: 50px 10px 22px;
+    background-color: #fafafa;
+  }
 
-  &__title {}
+  &__subtitle {
+    color: #737373;
+    font-weight: 700;
+    text-align: center;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+    margin-bottom: 17px;
+  }
 
-  &__description {}
+  &__title {
+    color: #252b42;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42.5px; /* 118.056% */
+    letter-spacing: 0.2px;
+    margin-bottom: 27px;
+  }
+
+  &__description {
+    padding: 24.5px;
+    color: #737373;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 38px; /* 158.333% */
+    letter-spacing: 0.2px;
+    margin-bottom: 50px;
+  }
 
   .download-btn {
-    &__btn {}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 17px;
 
-    &__btn--playstore {}
+    &__btn {
+      width: 236px;
+      padding: 16px 0;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px; /* 150% */
+      letter-spacing: 0.1px;
+      border-radius: 30px;
+      transition: transform 0.3s;
+    }
 
-    &__btn--app-store {}
+    &__btn--playstore {
+      color: #fff;
+      background-color: #fa4a0c;
+      box-shadow: 0 40px 40px 0 rgba(0, 0, 0, 0.07);
+      border: 1px solid #fff;
+
+      &:hover {
+        background: linear-gradient(90deg, rgba(0,93,167,1) 0%,
+                        rgba(0,142,40,1) 40%,
+                        rgba(242,89,6,1) 70%,
+                        rgba(255,239,51,1) 100%);
+        transform: scale(1.02);
+      }
+    }
+
+    &__btn--app-store {
+      color: #fa4a0c;
+      background-color: transparent;
+      border: 1px solid #fa4a0c;
+
+      &:hover {
+        color: #fff;
+        background: linear-gradient(0deg, rgba(30,187,175,1) 0%,
+                  rgba(0,37,182,1) 45%,
+                  rgba(0,37,182,1) 55%,
+                  rgba(84,156,255,1) 100%);
+        border: 1px solid #fff;
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  &__bottom {
+    height: 120vw;
+    background: url(../assets/images/food-app-img-1.png) left top / 80%,
+                url(../assets/images/food-app-img-2.png) right / 50%;
+    background-repeat: no-repeat;
   }
 }
