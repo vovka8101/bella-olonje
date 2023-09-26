@@ -7,6 +7,114 @@
       font-weight: 600;
       line-height: 36px; /* 150% */
       letter-spacing: 0.1px;
+      padding-bottom: 46px;
+      border-bottom: 3px solid #e4e4e4;
+      margin-bottom: 65px;
+    }
+
+    .action {
+      padding-inline: 38px;
+      margin-bottom: 65px;
+
+      &__content {}
+
+      &__title {
+        color: #fa4a0c;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px; /* 150% */
+        letter-spacing: 0.1px;
+        margin-bottom: 40px;
+      }
+
+      &__info {
+        color: #252b42;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 57px; /* 142.5% */
+        letter-spacing: 0.2px;
+        margin-bottom: 50px;
+      }
+
+      &__hint {
+        max-width: 257px;
+        margin: auto;
+        color: #737373;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 38px; /* 158.333% */
+        letter-spacing: 0.2px;
+        margin-bottom: 40px;
+      }
+
+      &__img {
+        display: block;
+        margin: auto;
+        box-shadow: 50px 30px 150px 0 rgba(46, 4, 4, 0.15);
+      }
+    }
+  }
+
+  .download {
+    padding: 120px 40px 112px;
+    background-color: #252b42;
+
+    &__title {
+      color: #fff;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 57px; /* 142.5% */
+      letter-spacing: 0.2px;
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      color: #bdbdbd;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 38px; /* 158.333% */
+      letter-spacing: 0.2px;
+      margin-bottom: 60px;
+    }
+
+    &__buttons {
+      max-width: 340px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__btn {
+      padding: 16px 0;
+      color: #fff;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 28px; /* 175% */
+      letter-spacing: 0.2px;
+      border-radius: 10px;
+
+      &--buy {
+        flex-basis: 40%;
+        background-color: #fa4a0c;
+        border: 1px solid transparent;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #000530;
+        }
+      }
+
+      &--try {
+        flex-basis: 54%;
+        background-color: transparent;
+        border: 1px solid #fff;
+
+        &:hover {
+          background-color: #000530;
+          border: 1px solid transparent
+        }
+      }
     }
   }
 }

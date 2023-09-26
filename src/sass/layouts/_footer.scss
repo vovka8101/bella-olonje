@@ -1,0 +1,32 @@
+@use "../abstracts/fonts" as f;
+
+.footer {
+  font-family: f.$footer-font;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__links {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 8px;
+  }
+
+  &__link {
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__text {
+    color: #5c5c5c;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px; /* 150% */
+    letter-spacing: 0.1px;
+  }
+}

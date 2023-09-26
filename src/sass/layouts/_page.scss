@@ -11,4 +11,9 @@ body {
 .link-active {
   color: #fa4a0c;
   pointer-events: none;
+  background-color: transparent;
+}
+
+.center {
+  text-align: center;
 }
