@@ -18,15 +18,15 @@
     height: v.$burger-line-height;
     background-color: #aaa;
     border-radius: 10px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
   }
 
   .burger::before {
-    margin-top: v.$burger-line-gap;
+    transform: translateY(v.$burger-line-gap);
   }
 
   .burger::after {
-    margin-top: v.$burger-line-gap * 2;
+    transform: translateY(v.$burger-line-gap * 2);
   }
 
   &:hover {
@@ -39,18 +39,9 @@
 }
 
 .burger-button--active {
-  width: v.$burger-btn-width + 4px;
-  height: v.$burger-btn-height + 6px;
-
-  .burger,
-  .burger::before,
-  .burger::after {
-    margin-top: 0;
-  }
 
   .burger {
-    top: 40%;
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) translate(-6px, 6px);
   }
 
   .burger::before {

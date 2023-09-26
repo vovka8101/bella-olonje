@@ -20,6 +20,10 @@
     &:hover {
       transform: scale(1.2);
     }
+
+    img {
+      vertical-align: bottom;
+    }
   }
 
   &__text {
