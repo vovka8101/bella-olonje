@@ -1,18 +1,27 @@
 @use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
 
 .header {
-  padding: 17px 16px;
+  height: v.$header-height-mob;
+  padding: 0 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
 
   @include m.desktop {
-    padding: 26px 40px;
+    height: v.$header-height-desk;
+    padding: 0 40px 0 70px;
   }
 
   .logo-img {
+    position: relative;
     width: 104px;
+    z-index: 20;
+
+    @include m.desktop {
+      width: 206px;
+    }
   }
 
   .nav {
@@ -31,8 +40,15 @@
   
     &__link {
       display: block;
-      padding: 10px;
+      padding: 16px;
       font-weight: 500;
+      transition: transform 0.3s;
+
+      &:hover {
+        text-decoration: underline;
+        text-underline-position: under;
+        transform: scale(1.2);
+      }
     }
   }
 }
