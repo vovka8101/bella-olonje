@@ -1,12 +1,33 @@
 @use "../abstracts/fonts" as f;
+@use "../abstracts/mixins" as m;
 
 .footer {
   font-family: f.$footer-font;
   height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+  &__content {
+    max-width: 1218px;
+    height: 100%;
+    margin-inline: auto;
+    padding: 0 45px 0 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include m.tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .logo-img {
+    display: none;
+
+    @include m.tablet {
+      display: inline-block;
+    }
+  }
 
   &__links {
     display: flex;
@@ -32,5 +53,19 @@
     font-weight: 700;
     line-height: 18px; /* 150% */
     letter-spacing: 0.1px;
+
+    .full-text {
+      display: none;
+    }
+
+    @include m.tablet {
+      .full-text {
+        display: block;
+      }
+
+      .short-text {
+        display: none;
+      }
+    }
   }
 }

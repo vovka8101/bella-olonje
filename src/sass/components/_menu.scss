@@ -37,4 +37,9 @@
 
 .mobile-nav--active {
   transform: translateX(0);
+
+  .link-active {
+    color: #fff;
+    background-color: #9d2900;
+  }
 }

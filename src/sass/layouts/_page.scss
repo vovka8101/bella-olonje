@@ -1,4 +1,5 @@
 @use "../abstracts/fonts" as f;
+@use "../abstracts/mixins" as m;
 
 body {
   font-family: f.$main-font;
@@ -12,8 +13,4 @@ body {
   color: #fa4a0c;
   pointer-events: none;
   background-color: transparent;
-}
-
-.center {
-  text-align: center;
 }

@@ -33,7 +33,11 @@
 
     &__list {
       display: flex;
-      gap: 94px;
+      gap: 72px;
+
+      @include m.desktop {
+        gap: 94px;
+      }
     }
   
     &__item {}
