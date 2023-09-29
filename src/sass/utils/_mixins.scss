@@ -1,0 +1,15 @@
+@mixin text-styles($col, $fz, $fw, $ta: inherit, $lh: inherit, $ls: normal) {
+  color: $col;
+  font-size: $fz;
+  font-weight: $fw;
+  text-align: $ta;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin flex($fd: row, $f-x: flex-start, $f-y: flex-start) {
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $f-x;
+  align-items: $f-y;
+}

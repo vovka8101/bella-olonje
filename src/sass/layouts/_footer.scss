@@ -1,8 +1,8 @@
-@use "../abstracts/fonts" as f;
-@use "../abstracts/mixins" as m;
+@use "../abstracts/" as v;
+@use "../utils/" as u;
 
 .footer {
-  font-family: f.$footer-font;
+  font-family: v.$footer-font;
   height: 200px;
 
   &__content {
@@ -10,12 +10,9 @@
     height: 100%;
     margin-inline: auto;
     padding: 0 45px 0 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include u.flex(column, center, center);
 
-    @include m.tablet {
+    @include u.tablet {
       flex-direction: row;
       justify-content: space-between;
     }
@@ -24,7 +21,7 @@
   .logo-img {
     display: none;
 
-    @include m.tablet {
+    @include u.tablet {
       display: inline-block;
     }
   }
@@ -33,6 +30,10 @@
     display: flex;
     gap: 24px;
     margin-bottom: 8px;
+
+    @include u.tablet {
+      margin-bottom: 0;
+    }
   }
 
   &__link {
@@ -48,17 +49,13 @@
   }
 
   &__text {
-    color: #5c5c5c;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 18px; /* 150% */
-    letter-spacing: 0.1px;
+    @include u.text-styles(v.$footer-text-color, 12px, 700, inherit, 18px, 0.1px);
 
     .full-text {
       display: none;
     }
 
-    @include m.tablet {
+    @include u.tablet {
       .full-text {
         display: block;
       }

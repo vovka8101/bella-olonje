@@ -1,8 +1,7 @@
-@use "../abstracts/fonts" as f;
-@use "../abstracts/mixins" as m;
+@use "../abstracts/" as v;
 
 body {
-  font-family: f.$main-font;
+  font-family: v.$main-font;
 }
 
 .hide {
@@ -10,7 +9,7 @@ body {
 }
 
 .link-active {
-  color: #fa4a0c;
+  color: v.$main-ui-color;
   pointer-events: none;
   background-color: transparent;
 }

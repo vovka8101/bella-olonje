@@ -1,15 +1,13 @@
-@use "../abstracts/mixins" as m;
-@use "../abstracts/variables" as v;
+@use "../utils/" as u;
+@use "../abstracts/" as v;
 
 .header {
   height: v.$header-height-mob;
   padding: 0 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include u.flex(row, space-between, center);
   background-color: #fff;
 
-  @include m.desktop {
+  @include u.desktop {
     height: v.$header-height-desk;
     padding: 0 40px 0 70px;
   }
@@ -19,7 +17,7 @@
     width: 104px;
     z-index: 20;
 
-    @include m.desktop {
+    @include u.desktop {
       width: 206px;
     }
   }
@@ -27,7 +25,7 @@
   .nav {
     display: none;
 
-    @include m.tablet {
+    @include u.tablet {
       display: block;
     }
 
@@ -35,13 +33,11 @@
       display: flex;
       gap: 72px;
 
-      @include m.desktop {
+      @include u.desktop {
         gap: 94px;
       }
     }
-  
-    &__item {}
-  
+    
     &__link {
       display: block;
       padding: 16px;

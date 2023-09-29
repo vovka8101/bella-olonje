@@ -1,26 +1,22 @@
-@use "../abstracts/mixins" as m;
-@use "../abstracts/fonts" as f;
+@use "../utils/" as u;
+@use "../abstracts/" as v;
 
 .main {
 
   .how-it-works {
     &__title {
-      text-align: center;
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 36px; /* 150% */
-      letter-spacing: 0.1px;
+      @include u.text-styles(initial, 24px, 600, center, 36px, 0.1px);
       padding-bottom: 46px;
       border-bottom: 3px solid #e4e4e4;
       margin-bottom: 65px;
 
-      @include m.tablet {
+      @include u.tablet {
         max-width: 884px;
         margin: 0 auto 120px;
         border-top: 3px solid #e4e4e4;
         border-bottom: none;
         padding: 65px 0 0;
-        font-family: f.$second-font;
+        font-family: v.$second-font;
         font-size: 44px;
         font-weight: 600;
       }
@@ -32,9 +28,8 @@
       padding-inline: 38px;
       margin-bottom: 65px;
 
-      @include m.tablet {
-        display: flex;
-        justify-content: space-between;
+      @include u.tablet {
+        @include u.flex(row, space-between, center);
 
         &:not(:last-child) {
           margin-bottom: 150px;
@@ -48,37 +43,27 @@
       &__content {
         text-align: center;
 
-        @include m.tablet {
+        @include u.tablet {
           flex-basis: 50%;
           text-align: left;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
+          @include u.flex(column, center);
         }
       }
 
       &__title {
-        color: #fa4a0c;
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 36px; /* 150% */
-        letter-spacing: 0.1px;
+        @include u.text-styles(v.$main-ui-color, 24px, 700, inherit, 36px, 0.1px);
         margin-bottom: 40px;
 
-        @include m.tablet {
+        @include u.tablet {
           margin-bottom: 17px;
         }
       }
 
       &__info {
-        color: #252b42;
-        font-size: 40px;
-        font-weight: 700;
-        line-height: 57px; /* 142.5% */
-        letter-spacing: 0.2px;
+        @include u.text-styles(v.$main-text-color, 40px, 700, inherit, 57px, 0.2px);
         margin-bottom: 50px;
 
-        @include m.tablet {
+        @include u.tablet {
           margin-bottom: 27px;
         }
       }
@@ -86,14 +71,10 @@
       &__hint {
         max-width: 257px;
         margin-inline: auto;
-        color: #737373;
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 38px; /* 158.333% */
-        letter-spacing: 0.2px;
+        @include u.text-styles(v.$second-text-color, 24px, 500, inherit, 38px, 0.2px);
         margin-bottom: 40px;
 
-        @include m.tablet {
+        @include u.tablet {
           max-width: none;
           margin-bottom: 0;
         }
@@ -104,7 +85,7 @@
         margin: auto;
         box-shadow: 50px 30px 150px 0 rgba(46, 4, 4, 0.15);
 
-        @include m.tablet {
+        @include u.tablet {
           margin-inline: 40px;
         }
       }
@@ -114,9 +95,9 @@
   .download {
     text-align: center;
     padding: 120px 40px 112px;
-    background-color: #252b42;
+    background-color: v.$main-text-color;
 
-    @include m.tablet {
+    @include u.tablet {
       padding: 140px 40px 130px;
       background-color: transparent;
       background-image: url(../assets/images/download-bg.png);
@@ -125,27 +106,19 @@
     }
 
     &__title {
-      color: #fff;
-      font-size: 40px;
-      font-weight: 700;
-      line-height: 57px; /* 142.5% */
-      letter-spacing: 0.2px;
+      @include u.text-styles(#fff, 40px, 700, inherit, 57px, 0.2px);
       margin-bottom: 20px;
     }
 
     &__text {
-      color: #bdbdbd;
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 38px; /* 158.333% */
-      letter-spacing: 0.2px;
+      @include u.text-styles(#bdbdbd, 24px, 500, inherit, 38px, 0.2px);
       margin-bottom: 60px;
 
       .full-text {
         display: none;
       }
 
-      @include m.tablet {
+      @include u.tablet {
         color: #fff;
 
         .full-text {
@@ -161,23 +134,17 @@
     &__buttons {
       max-width: 340px;
       margin: auto;
-      display: flex;
-      justify-content: space-between;
+      @include u.flex(row, space-between);
     }
 
     &__btn {
       padding: 16px 0;
-      color: #fff;
-      text-align: center;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 28px; /* 175% */
-      letter-spacing: 0.2px;
+      @include u.text-styles(#fff, 16px, 700, center, 28px, 0.2px);
       border-radius: 10px;
 
       &--buy {
         flex-basis: 40%;
-        background-color: #fa4a0c;
+        background-color: v.$main-ui-color;
         border: 1px solid transparent;
         transition: background-color 0.3s;
 

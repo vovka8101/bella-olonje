@@ -1,9 +1,9 @@
-@use "../abstracts/mixins" as m;
-@use "../abstracts/fonts" as f;
+@use "../abstracts/" as v;
+@use "../utils" as u;
 
 .hero {
 
-  @include m.tablet {
+  @include u.tablet {
     background-image: url(../assets/images/hero-bg.png);
     background-repeat: no-repeat;
     background-position: 0px 0px;
@@ -18,25 +18,21 @@
     padding: 50px 10px 22px;
     background-color: #fafafa;
 
-    @include m.tablet {
+    @include u.tablet {
       background-color: transparent;
     }
   }
 
   &__subtitle {
-    color: #737373;
-    font-weight: 700;
-    text-align: center;
-    line-height: 24px; /* 150% */
-    letter-spacing: 0.1px;
+    @include u.text-styles(v.$second-text-color, 1rem, 700, center, 24px, 0.1px);
     margin-bottom: 17px;
 
-    @include m.tablet {
+    @include u.tablet {
       color: #f6f6f6;
       line-height: 36px; /* 150% */
     }
 
-    @include m.desktop {
+    @include u.desktop {
       margin-bottom: 0;
     }
   }
@@ -44,22 +40,17 @@
   &__title {
     max-width: 560px;
     margin: auto;
-    color: #252b42;
-    text-align: center;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 42.5px; /* 118.056% */
-    letter-spacing: 0.2px;
+    @include u.text-styles(v.$main-text-color, 36px, 700, center, 42.5px, 0.2px);
     margin-bottom: 27px;
     
-    @include m.tablet {
+    @include u.tablet {
       max-width: 600px;
-      font-family: f.$second-font;
+      font-family: v.$second-font;
       color: #fff;
       margin-bottom: 0;
     }
 
-    @include m.desktop {
+    @include u.desktop {
       max-width: 960px;
       font-size: 58px;
       line-height: 80px; /* 137.931% */
@@ -68,27 +59,20 @@
 
   &__description {
     padding: 24.5px;
-    color: #737373;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 38px; /* 158.333% */
-    letter-spacing: 0.2px;
+    @include u.text-styles(v.$second-text-color, 24px, 500, center, 38px, 0.2px);
     margin-bottom: 50px;
 
-    @include m.tablet {
+    @include u.tablet {
       color: #f6f6f6;
       margin-bottom: 30px;
     }
   }
 
   .download-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include u.flex(column, flex-start, center);
     gap: 17px;
 
-    @include m.desktop {
+    @include u.desktop {
       flex-direction: row;
       justify-content: center ;
     }
@@ -96,22 +80,18 @@
     &__btn {
       width: 236px;
       padding: 16px 0;
-      text-align: center;
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 36px; /* 150% */
-      letter-spacing: 0.1px;
+      @include u.text-styles(initial, 24px, 700, center, 36px, 0.1px);
       border-radius: 30px;
       transition: transform 0.3s;
     }
 
     &__btn--playstore {
       color: #fff;
-      background-color: #fa4a0c;
+      background-color: v.$main-ui-color;
       box-shadow: 0 40px 40px 0 rgba(0, 0, 0, 0.07);
       border: 1px solid #fff;
 
-      @include m.tablet {
+      @include u.tablet {
         border: none;
       }
 
@@ -125,11 +105,11 @@
     }
 
     &__btn--app-store {
-      color: #fa4a0c;
+      color: v.$main-ui-color;
       background-color: transparent;
-      border: 1px solid #fa4a0c;
+      border: 1px solid v.$main-ui-color;
 
-      @include m.tablet {
+      @include u.tablet {
         color: #fff;
         border: 1px solid #fff;
       }
@@ -154,7 +134,7 @@
     background-repeat: no-repeat;
     margin-bottom: 40px;
 
-    @include m.tablet {
+    @include u.tablet {
       width: 540px;
       height: 640px;
       margin: auto;
