@@ -9,10 +9,10 @@
     max-width: 1218px;
     height: 100%;
     margin-inline: auto;
-    padding: 0 45px 0 70px;
     @include u.flex(column, center, center);
 
     @include u.tablet {
+      padding: 0 45px 0 70px;
       flex-direction: row;
       justify-content: space-between;
     }

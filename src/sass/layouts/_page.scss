@@ -5,7 +5,9 @@ body {
 }
 
 .hide {
+  height: 100%;
   overflow: hidden;
+  touch-action: none;
 }
 
 .link-active {

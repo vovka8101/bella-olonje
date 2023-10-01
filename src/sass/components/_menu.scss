@@ -9,6 +9,7 @@
   right: 0;
   @include u.flex(column, flex-start, center);
   height: 100vh;
+  overflow: auto;
   z-index: 10;
   background-color: v.$menu-bg-color;
   transform: translateX(100%);
