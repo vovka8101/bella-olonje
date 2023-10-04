@@ -6,7 +6,6 @@
   @include u.tablet {
     background-image: url(../assets/images/hero-bg.png);
     background-repeat: no-repeat;
-    background-position: 0px 0px;
     background-size: auto 55%;
   }
 
@@ -15,7 +14,7 @@
   }
 
   &__top {
-    padding: 50px 10px 22px;
+    padding: u.toRem(50px, 10px, 22px);
     background-color: #fafafa;
 
     @include u.tablet {
@@ -24,12 +23,12 @@
   }
 
   &__subtitle {
-    @include u.text-styles(v.$second-text-color, 1rem, 700, center, 24px, 0.1px);
-    margin-bottom: 17px;
+    @include u.text-styles(v.$second-text-color, 1rem, 700, center, u.toRem(24px), 0.1px);
+    margin-bottom: u.toRem(17px);
 
     @include u.tablet {
       color: #f6f6f6;
-      line-height: 36px; /* 150% */
+      line-height: u.toRem(36px); /* 150% */
     }
 
     @include u.desktop {
@@ -38,39 +37,39 @@
   }
 
   &__title {
-    max-width: 560px;
+    max-width: v.$hero-title-mw;
     margin: auto;
-    @include u.text-styles(v.$main-text-color, 36px, 700, center, 42.5px, 0.2px);
-    margin-bottom: 27px;
+    @include u.text-styles(v.$main-text-color, u.toRem(36px), 700, center, u.toRem(42.5px), 0.2px);
+    margin-bottom: u.toRem(27px);
     
     @include u.tablet {
-      max-width: 600px;
+      max-width: v.$hero-title-mw-tab;
       font-family: v.$second-font;
       color: #fff;
       margin-bottom: 0;
     }
 
     @include u.desktop {
-      max-width: 960px;
-      font-size: 58px;
-      line-height: 80px; /* 137.931% */
+      max-width: v.$hero-title-mw-desk;
+      font-size: u.toRem(58px);
+      line-height: u.toRem(80px); /* 137.931% */
     }
   }
 
   &__description {
-    padding: 24.5px;
-    @include u.text-styles(v.$second-text-color, 24px, 500, center, 38px, 0.2px);
-    margin-bottom: 50px;
+    padding: u.toRem(24.5px);
+    @include u.text-styles(v.$second-text-color, u.toRem(24px), 500, center, u.toRem(38px), 0.2px);
+    margin-bottom: u.toRem(50px);
 
     @include u.tablet {
       color: #f6f6f6;
-      margin-bottom: 30px;
+      margin-bottom: u.toRem(30px);
     }
   }
 
   .download-btn {
     @include u.flex(column, flex-start, center);
-    gap: 17px;
+    gap: u.toRem(17px);
 
     @include u.desktop {
       flex-direction: row;
@@ -78,11 +77,11 @@
     }
 
     &__btn {
-      width: 236px;
-      padding: 16px 0;
-      @include u.text-styles(initial, 24px, 700, center, 36px, 0.1px);
+      width: v.$hero-download-btn-w;
+      padding: u.toRem(16px) 0;
+      @include u.text-styles(initial, u.toRem(24px), 700, center, u.toRem(36px), 0.1px);
       border-radius: 30px;
-      transition: transform 0.3s;
+      transition: transform v.$default-time-duration;
     }
 
     &__btn--playstore {
@@ -128,15 +127,15 @@
   }
 
   &__bottom {
-    height: 120vw;
+    height: v.$hero-bottom-h;
     background: url(../assets/images/food-app-img-1.png) left top / 80%,
                 url(../assets/images/food-app-img-2.png) right / 50%;
     background-repeat: no-repeat;
-    margin-bottom: 40px;
+    margin-bottom: u.toRem(40px);
 
     @include u.tablet {
-      width: 540px;
-      height: 640px;
+      width: v.$hero-bottom-w-tab;
+      height: v.$hero-bottom-h-tab;
       margin: auto;
     }
   }

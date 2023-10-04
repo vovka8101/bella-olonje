@@ -5,34 +5,34 @@
 
   .how-it-works {
     &__title {
-      @include u.text-styles(initial, 24px, 600, center, 36px, 0.1px);
-      padding-bottom: 46px;
+      @include u.text-styles(initial, u.toRem(24px), 600, center, u.toRem(36px) 0.1px);
+      padding-bottom: u.toRem(46px);
       border-bottom: 3px solid #e4e4e4;
-      margin-bottom: 65px;
+      margin-bottom: u.toRem(65px);
 
       @include u.tablet {
-        max-width: 884px;
-        margin: 0 auto 120px;
+        max-width: v.$how-it-works-mw;
+        margin: 0 auto u.toRem(16px);
         border-top: 3px solid #e4e4e4;
         border-bottom: none;
-        padding: 65px 0 0;
+        padding: u.toRem(65px) 0 0;
         font-family: v.$second-font;
-        font-size: 44px;
+        font-size: u.toRem(44px);
         font-weight: 600;
       }
     }
 
     .action {
-      max-width: 1140px;
+      max-width: v.$action-mw;
       margin-inline: auto;
-      padding-inline: 38px;
-      margin-bottom: 65px;
+      padding-inline: u.toRem(38px);
+      margin-bottom: u.toRem(65px);
 
       @include u.tablet {
         @include u.flex(row, space-between, center);
 
         &:not(:last-child) {
-          margin-bottom: 150px;
+          margin-bottom: u.toRem(150px);
         }
 
         &:nth-child(even) {
@@ -51,28 +51,28 @@
       }
 
       &__title {
-        @include u.text-styles(v.$main-ui-color, 24px, 700, inherit, 36px, 0.1px);
-        margin-bottom: 40px;
+        @include u.text-styles(v.$main-ui-color, u.toRem(24px), 700, inherit, u.toRem(36px), 0.1px);
+        margin-bottom: u.toRem(40px);
 
         @include u.tablet {
-          margin-bottom: 17px;
+          margin-bottom: u.toRem(17px);
         }
       }
 
       &__info {
-        @include u.text-styles(v.$main-text-color, 40px, 700, inherit, 57px, 0.2px);
-        margin-bottom: 50px;
+        @include u.text-styles(v.$main-text-color, u.toRem(40px), 700, inherit, u.toRem(57px), 0.2px);
+        margin-bottom: u.toRem(50px);
 
         @include u.tablet {
-          margin-bottom: 27px;
+          margin-bottom: u.toRem(27px);
         }
       }
 
       &__hint {
-        max-width: 257px;
+        max-width: v.$action-hint-mw;
         margin-inline: auto;
-        @include u.text-styles(v.$second-text-color, 24px, 500, inherit, 38px, 0.2px);
-        margin-bottom: 40px;
+        @include u.text-styles(v.$second-text-color, u.toRem(24px), 500, inherit, u.toRem(38px), 0.2px);
+        margin-bottom: u.toRem(40px);
 
         @include u.tablet {
           max-width: none;
@@ -86,7 +86,7 @@
         box-shadow: 50px 30px 150px 0 rgba(46, 4, 4, 0.15);
 
         @include u.tablet {
-          margin-inline: 40px;
+          margin-inline: u.toRem(40px);
         }
       }
     }
@@ -94,11 +94,11 @@
 
   .download {
     text-align: center;
-    padding: 120px 40px 112px;
+    padding: u.toRem(120px, 40px, 112px);
     background-color: v.$main-text-color;
 
     @include u.tablet {
-      padding: 140px 40px 130px;
+      padding: u.toRem(140px, 40px, 130px);
       background-color: transparent;
       background-image: url(../assets/images/download-bg.png);
       background-repeat: no-repeat;
@@ -106,13 +106,13 @@
     }
 
     &__title {
-      @include u.text-styles(#fff, 40px, 700, inherit, 57px, 0.2px);
-      margin-bottom: 20px;
+      @include u.text-styles(#fff, u.toRem(40px), 700, inherit, u.toRem(57px) 0.2px);
+      margin-bottom: u.toRem(20px);
     }
 
     &__text {
-      @include u.text-styles(#bdbdbd, 24px, 500, inherit, 38px, 0.2px);
-      margin-bottom: 60px;
+      @include u.text-styles(#bdbdbd, u.toRem(24px), 500, inherit, u.toRem(38px), 0.2px);
+      margin-bottom: u.toRem(60px);
 
       .full-text {
         display: none;
@@ -132,21 +132,21 @@
     }
 
     &__buttons {
-      max-width: 340px;
+      max-width: v.$download-btns-mw;
       margin: auto;
       @include u.flex(row, space-between);
     }
 
     &__btn {
-      padding: 16px 0;
-      @include u.text-styles(#fff, 16px, 700, center, 28px, 0.2px);
+      padding: u.toRem(16px) 0;
+      @include u.text-styles(#fff, u.toRem(16px), 700, center, u.toRem(28px), 0.2px);
       border-radius: 10px;
 
       &--buy {
         flex-basis: 40%;
         background-color: v.$main-ui-color;
         border: 1px solid transparent;
-        transition: background-color 0.3s;
+        transition: background-color v.$default-time-duration;
 
         &:hover {
           background-color: #000530;

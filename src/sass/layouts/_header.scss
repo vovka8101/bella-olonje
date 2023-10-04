@@ -2,23 +2,31 @@
 @use "../abstracts/" as v;
 
 .header {
-  height: v.$header-height-mob;
-  padding: 0 16px;
+  height: v.$header-h-mob;
+  padding: 0 u.toRem(16px);
   @include u.flex(row, space-between, center);
   background-color: #fff;
 
   @include u.desktop {
-    height: v.$header-height-desk;
-    padding: 0 40px 0 70px;
+    height: v.$header-h-desk;
+    padding: 0 u.toRem(40px) 0 u.toRem(70px);
+  }
+
+  &:has(.burger-button--active) {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: v.$menu-bg-color;
+    z-index: 20;
   }
 
   .logo-img {
     position: relative;
-    width: 104px;
+    width: v.$logo-width-mob;
     z-index: 20;
 
     @include u.desktop {
-      width: 206px;
+      width: v.$logo-width-desk;
     }
   }
 
@@ -31,18 +39,18 @@
 
     &__list {
       display: flex;
-      gap: 72px;
+      gap: v.$nav-items-gap-tab;
 
       @include u.desktop {
-        gap: 94px;
+        gap: v.$nav-items-gap-desk;
       }
     }
     
     &__link {
       display: block;
-      padding: 16px;
+      padding: u.toRem(16px);
       font-weight: 500;
-      transition: transform 0.3s;
+      transition: transform v.$default-time-duration;
 
       &:hover {
         text-decoration: underline;

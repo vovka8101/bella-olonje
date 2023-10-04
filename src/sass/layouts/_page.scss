@@ -4,6 +4,18 @@ body {
   font-family: v.$main-font;
 }
 
+body:has(.mobile-nav--active) {
+  .header {
+    .nav {
+      display: none;
+    }
+
+    .burger-button {
+      display: block;
+    }
+  }
+}
+
 .hide {
   height: 100%;
   overflow: hidden;

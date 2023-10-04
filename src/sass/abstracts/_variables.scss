@@ -1,7 +1,29 @@
-$header-height-mob: 112px;
-$header-height-desk: 150px;
+$header-h-mob: 112px;
+$header-h-desk: 150px;
+$logo-width-mob: 104px;
+$logo-width-desk: 206px;
+$nav-items-gap-tab: 72px;
+$nav-items-gap-desk: 94px;
+
+$how-it-works-mw: 884px;
+$action-mw: 1140px;
+$action-hint-mw: 257px;
+$download-btns-mw: 340px;
+
+$default-time-duration: 0.3s;
 
 $burger-btn-width: 26px;
-$burger-line-height: 4px;
+$burger-line-h: 4px;
 $burger-line-gap: 9px;
-$burger-btn-height: $burger-line-height + ($burger-line-gap * 2);
+$burger-btn-h: $burger-line-h + ($burger-line-gap * 2);
+
+$hero-title-mw: 560px;
+$hero-title-mw-tab: 600px;
+$hero-title-mw-desk: 960px;
+$hero-download-btn-w: 236px;
+$hero-bottom-h: 120vw;
+$hero-bottom-w-tab: 540px;
+$hero-bottom-h-tab: 640px;
+
+$footer-h: 200px;
+$footer-content-mw: 1218px;

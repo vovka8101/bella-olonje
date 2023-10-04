@@ -3,16 +3,16 @@
 
 .footer {
   font-family: v.$footer-font;
-  height: 200px;
+  height: v.$footer-h;
 
   &__content {
-    max-width: 1218px;
+    max-width: v.$footer-content-mw;
     height: 100%;
     margin-inline: auto;
     @include u.flex(column, center, center);
 
     @include u.tablet {
-      padding: 0 45px 0 70px;
+      padding: 0 u.toRem(45px) 0 u.toRem(70px);
       flex-direction: row;
       justify-content: space-between;
     }
@@ -28,8 +28,8 @@
 
   &__links {
     display: flex;
-    gap: 24px;
-    margin-bottom: 8px;
+    gap: u.toRem(24px);
+    margin-bottom: u.toRem(8px);
 
     @include u.tablet {
       margin-bottom: 0;
@@ -37,7 +37,7 @@
   }
 
   &__link {
-    transition: transform 0.3s;
+    transition: transform v.$default-time-duration;
 
     &:hover {
       transform: scale(1.2);
@@ -49,7 +49,7 @@
   }
 
   &__text {
-    @include u.text-styles(v.$footer-text-color, 12px, 700, inherit, 18px, 0.1px);
+    @include u.text-styles(v.$footer-text-color, u.toRem(12px), 700, inherit, u.toRem(18px), 0.1px);
 
     .full-text {
       display: none;

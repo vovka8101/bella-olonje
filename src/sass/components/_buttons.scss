@@ -5,9 +5,13 @@
   position: relative;
   display: block;
   width: v.$burger-btn-width;
-  height: v.$burger-btn-height;
+  height: v.$burger-btn-h;
   z-index: 20;
   cursor: pointer;
+
+  @include u.tablet {
+    display: none;
+  }
 
   .burger,
   .burger::before,
@@ -16,10 +20,11 @@
     content: "";
     display: block;
     width: 100%;
-    height: v.$burger-line-height;
+    height: v.$burger-line-h;
     background-color: #aaa;
     border-radius: 10px;
-    transition: transform 0.3s, opacity 0.3s;
+    transition: transform v.$default-time-duration,
+                opacity v.$default-time-duration;
   }
 
   .burger::before {
@@ -32,10 +37,6 @@
 
   &:hover {
     transform: scale(1.1);
-  }
-
-  @include u.tablet {
-    display: none;
   }
 }
 
