@@ -73,6 +73,13 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+body:has(.mobile-nav--active) .header .nav {
+  display: none;
+}
+body:has(.mobile-nav--active) .header .burger-button {
+  display: block;
+}
+
 .hide {
   height: 100%;
   overflow: hidden;
@@ -87,7 +94,7 @@ body {
 
 .header {
   height: 112px;
-  padding: 0 16px;
+  padding: 0 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -97,8 +104,15 @@ body {
 @media (min-width: 992px) {
   .header {
     height: 150px;
-    padding: 0 40px 0 70px;
+    padding: 0 2.5rem 0 4.375rem;
   }
+}
+.header:has(.burger-button--active) {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #434343;
+  z-index: 20;
 }
 .header .logo-img {
   position: relative;
@@ -129,7 +143,7 @@ body {
 }
 .header .nav__link {
   display: block;
-  padding: 16px;
+  padding: 1rem;
   font-weight: 500;
   transition: transform 0.3s;
 }
@@ -141,32 +155,32 @@ body {
 
 .main .how-it-works__title {
   color: initial;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
-  line-height: 36px;
-  letter-spacing: 0.1px;
-  padding-bottom: 46px;
+  line-height: 2.25rem 0.1px;
+  letter-spacing: normal;
+  padding-bottom: 2.875rem;
   border-bottom: 3px solid #e4e4e4;
-  margin-bottom: 65px;
+  margin-bottom: 4.0625rem;
 }
 @media (min-width: 768px) {
   .main .how-it-works__title {
     max-width: 884px;
-    margin: 0 auto 120px;
+    margin: 0 auto 1rem;
     border-top: 3px solid #e4e4e4;
     border-bottom: none;
-    padding: 65px 0 0;
+    padding: 4.0625rem 0 0;
     font-family: "Poppins", sans-serif;
-    font-size: 44px;
+    font-size: 2.75rem;
     font-weight: 600;
   }
 }
 .main .how-it-works .action {
   max-width: 1140px;
   margin-inline: auto;
-  padding-inline: 38px;
-  margin-bottom: 65px;
+  padding-inline: 2.375rem;
+  margin-bottom: 4.0625rem;
 }
 @media (min-width: 768px) {
   .main .how-it-works .action {
@@ -176,7 +190,7 @@ body {
     align-items: center;
   }
   .main .how-it-works .action:not(:last-child) {
-    margin-bottom: 150px;
+    margin-bottom: 9.375rem;
   }
   .main .how-it-works .action:nth-child(even) {
     flex-direction: row-reverse;
@@ -197,42 +211,42 @@ body {
 }
 .main .how-it-works .action__title {
   color: #fa4a0c;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   text-align: inherit;
-  line-height: 36px;
+  line-height: 2.25rem;
   letter-spacing: 0.1px;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 @media (min-width: 768px) {
   .main .how-it-works .action__title {
-    margin-bottom: 17px;
+    margin-bottom: 1.0625rem;
   }
 }
 .main .how-it-works .action__info {
   color: #252b42;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
   text-align: inherit;
-  line-height: 57px;
+  line-height: 3.5625rem;
   letter-spacing: 0.2px;
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 }
 @media (min-width: 768px) {
   .main .how-it-works .action__info {
-    margin-bottom: 27px;
+    margin-bottom: 1.6875rem;
   }
 }
 .main .how-it-works .action__hint {
   max-width: 257px;
   margin-inline: auto;
   color: #737373;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 500;
   text-align: inherit;
-  line-height: 38px;
+  line-height: 2.375rem;
   letter-spacing: 0.2px;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 @media (min-width: 768px) {
   .main .how-it-works .action__hint {
@@ -247,17 +261,17 @@ body {
 }
 @media (min-width: 768px) {
   .main .how-it-works .action__img {
-    margin-inline: 40px;
+    margin-inline: 2.5rem;
   }
 }
 .main .download {
   text-align: center;
-  padding: 120px 40px 112px;
+  padding: 7.5rem 2.5rem 7rem;
   background-color: #252b42;
 }
 @media (min-width: 768px) {
   .main .download {
-    padding: 140px 40px 130px;
+    padding: 8.75rem 2.5rem 8.125rem;
     background-color: transparent;
     background-image: url(../assets/images/download-bg.png);
     background-repeat: no-repeat;
@@ -266,21 +280,21 @@ body {
 }
 .main .download__title {
   color: #fff;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
   text-align: inherit;
-  line-height: 57px;
-  letter-spacing: 0.2px;
-  margin-bottom: 20px;
+  line-height: 3.5625rem 0.2px;
+  letter-spacing: normal;
+  margin-bottom: 1.25rem;
 }
 .main .download__text {
   color: #bdbdbd;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 500;
   text-align: inherit;
-  line-height: 38px;
+  line-height: 2.375rem;
   letter-spacing: 0.2px;
-  margin-bottom: 60px;
+  margin-bottom: 3.75rem;
 }
 .main .download__text .full-text {
   display: none;
@@ -305,12 +319,12 @@ body {
   align-items: flex-start;
 }
 .main .download__btn {
-  padding: 16px 0;
+  padding: 1rem 0;
   color: #fff;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   text-align: center;
-  line-height: 28px;
+  line-height: 1.75rem;
   letter-spacing: 0.2px;
   border-radius: 10px;
 }
@@ -348,7 +362,7 @@ body {
 }
 @media (min-width: 768px) {
   .footer__content {
-    padding: 0 45px 0 70px;
+    padding: 0 2.8125rem 0 4.375rem;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -363,8 +377,8 @@ body {
 }
 .footer__links {
   display: flex;
-  gap: 24px;
-  margin-bottom: 8px;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 @media (min-width: 768px) {
   .footer__links {
@@ -382,10 +396,10 @@ body {
 }
 .footer__text {
   color: #5c5c5c;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
   text-align: inherit;
-  line-height: 18px;
+  line-height: 1.125rem;
   letter-spacing: 0.1px;
 }
 .footer__text .full-text {
@@ -408,6 +422,11 @@ body {
   z-index: 20;
   cursor: pointer;
 }
+@media (min-width: 768px) {
+  .burger-button {
+    display: none;
+  }
+}
 .burger-button .burger,
 .burger-button .burger::before,
 .burger-button .burger::after {
@@ -429,11 +448,6 @@ body {
 .burger-button:hover {
   transform: scale(1.1);
 }
-@media (min-width: 768px) {
-  .burger-button {
-    display: none;
-  }
-}
 
 .burger-button--active .burger {
   transform: rotate(-45deg) translate(-6px, 6px);
@@ -446,7 +460,7 @@ body {
 }
 
 .mobile-nav {
-  padding-top: 112px;
+  padding: 112px 0 2.5rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -464,8 +478,8 @@ body {
 }
 .mobile-nav__link {
   width: 50%;
-  padding: 12px 16px;
-  margin-top: 20px;
+  padding: 0.75rem 1rem;
+  margin-top: 1.25rem;
   color: #252b42;
   font-size: 1.5rem;
   font-weight: 500;
@@ -494,7 +508,6 @@ body {
   .hero {
     background-image: url(../assets/images/hero-bg.png);
     background-repeat: no-repeat;
-    background-position: 0px 0px;
     background-size: auto 55%;
   }
 }
@@ -504,7 +517,7 @@ body {
   }
 }
 .hero__top {
-  padding: 50px 10px 22px;
+  padding: 3.125rem 0.625rem 1.375rem;
   background-color: #fafafa;
 }
 @media (min-width: 768px) {
@@ -517,14 +530,14 @@ body {
   font-size: 1rem;
   font-weight: 700;
   text-align: center;
-  line-height: 24px;
+  line-height: 1.5rem;
   letter-spacing: 0.1px;
-  margin-bottom: 17px;
+  margin-bottom: 1.0625rem;
 }
 @media (min-width: 768px) {
   .hero__subtitle {
     color: #f6f6f6;
-    line-height: 36px; /* 150% */
+    line-height: 2.25rem; /* 150% */
   }
 }
 @media (min-width: 992px) {
@@ -536,12 +549,12 @@ body {
   max-width: 560px;
   margin: auto;
   color: #252b42;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 700;
   text-align: center;
-  line-height: 42.5px;
+  line-height: 2.65625rem;
   letter-spacing: 0.2px;
-  margin-bottom: 27px;
+  margin-bottom: 1.6875rem;
 }
 @media (min-width: 768px) {
   .hero__title {
@@ -554,24 +567,24 @@ body {
 @media (min-width: 992px) {
   .hero__title {
     max-width: 960px;
-    font-size: 58px;
-    line-height: 80px; /* 137.931% */
+    font-size: 3.625rem;
+    line-height: 5rem; /* 137.931% */
   }
 }
 .hero__description {
-  padding: 24.5px;
+  padding: 1.53125rem;
   color: #737373;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 500;
   text-align: center;
-  line-height: 38px;
+  line-height: 2.375rem;
   letter-spacing: 0.2px;
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 }
 @media (min-width: 768px) {
   .hero__description {
     color: #f6f6f6;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
   }
 }
 .hero .download-btn {
@@ -579,7 +592,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 17px;
+  gap: 1.0625rem;
 }
 @media (min-width: 992px) {
   .hero .download-btn {
@@ -589,12 +602,12 @@ body {
 }
 .hero .download-btn__btn {
   width: 236px;
-  padding: 16px 0;
+  padding: 1rem 0;
   color: initial;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
-  line-height: 36px;
+  line-height: 2.25rem;
   letter-spacing: 0.1px;
   border-radius: 30px;
   transition: transform 0.3s;
@@ -635,7 +648,7 @@ body {
   height: 120vw;
   background: url(../assets/images/food-app-img-1.png) left top/80%, url(../assets/images/food-app-img-2.png) right/50%;
   background-repeat: no-repeat;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 @media (min-width: 768px) {
   .hero__bottom {

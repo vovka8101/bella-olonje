@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <script defer src="js/main.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="js/main.js" defer></script>
   <title>Bella Olonje</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body id="home">
@@ -67,7 +69,11 @@
     <section class="how-it-works">
       <h2 class="how-it-works__title">How the app works</h2>
       <div class="how-it-works__action action">
-        <div class="action__content">
+        <div
+          class="action__content"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           <h3 class="action__title">Create an account</h3>
           <p class="action__info">Create/login to an existing account to get started</p>
           <p class="action__hint">An account is created with your email and a desired password</p>
@@ -75,11 +81,17 @@
         <img
           src="assets/images/action-1.png"
           alt="Action 1"
+          data-aos="fade-right"
+          data-aos-duration="1000"
           class="action__img"
         >
       </div>
       <div class="how-it-works__action action">
-        <div class="action__content">
+        <div
+          class="action__content"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           <h3 class="action__title">Explore while shopping</h3>
           <p class="action__info">Shop for your favorites meal as e dey hot.</p>
           <p class="action__hint">Shop for your favorite meals or drinks and enjoy while doing it.</p>
@@ -87,11 +99,17 @@
         <img
           src="assets/images/action-2.png"
           alt="Action 2"
+          data-aos="fade-left"
+          data-aos-duration="1000"
           class="action__img"
         >
       </div>
       <div class="how-it-works__action action">
-        <div class="action__content">
+        <div
+          class="action__content"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           <h3 class="action__title">Checkout</h3>
           <p class="action__info">When you done check out and get it delivered.</p>
           <p class="action__hint">When you done check out and get it delivered with ease.</p>
@@ -99,17 +117,19 @@
         <img
           src="assets/images/action-3.png"
           alt="Action 3"
+          data-aos="fade-right"
+          data-aos-duration="1000"
           class="action__img"
         >
       </div>
     </section>
-    <section class="download">
+    <section class="download" data-aos="fade-up">
       <h2 class="download__title">Download the app now.</h2>
       <p class="download__text">
         <span class="short-text">Most calendars are designed for teams.</span>
         <span class="full-text">Available on your favorite store. Start your premium experience now</span>
       </p>
-      <div class="download__buttons">
+      <div class="download__buttons" data-aos="zoom-out-down">
         <a href="#" class="download__btn download__btn--buy">Buy now</a>
         <a href="#" class="download__btn download__btn--try">Try for free</a>
       </div>
@@ -152,6 +172,10 @@
       </p>
     </div>
   </footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
