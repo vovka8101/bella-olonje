@@ -8,5 +8,6 @@
 
 - Semantic HTML5 markup
 - SCSS
+- Javascript
 - Flexbox
 - Mobile-first approach
