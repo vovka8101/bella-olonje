@@ -2,12 +2,11 @@
 @use "../utils/" as u;
 
 .mobile-nav {
-  padding: v.$header-h-mob 0 u.toRem(40px);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  @include u.flex(column, flex-start, center);
+  @include u.flex(column, center, center);
   height: 100vh;
   overflow: auto;
   z-index: 10;

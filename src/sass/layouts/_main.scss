@@ -4,6 +4,8 @@
 .main {
 
   .how-it-works {
+    overflow: hidden;
+
     &__title {
       @include u.text-styles(initial, u.toRem(24px), 600, center, u.toRem(36px) 0.1px);
       padding-bottom: u.toRem(46px);
